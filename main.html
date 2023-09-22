@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="checkout">
+        <h1>CHECKOUT</h1>
+    </div>
+
+    <div class="box customer-info">
+        <div class="accordion">
+            <div class="customer-info-header item-header">
+                <h3>Customer Information</h3>
+            </div>
+        </div>
+        <div class="content" style="display:block">
+                <form id="customer-info-form" >
+
+                <div class="input-details">
+                <div class="form-group aadhar">
+                    <label for="aadhar" class="starlabel">Aadhar Number:</label><span style="color:red">*</span>
+                    <input type="password" id="aadhar" name="aadhar" placeholder="Enter Aadhar Number" maxlength="12">
+                    <span id="aadhar-error" style="color:red" class="mandatory-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="first-name" class="starlabel">First Name:</label><span style="color:red">*</span>
+                    <input type="text" id="first-name" name="first-name" placeholder="Enter first name">
+                    <span id="first-name-error" style="color:red" class="mandatory-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="middle-name">Middle Name:</label>
+                    <input type="text" id="middle-name" name="middle-name" placeholder="Enter middle name">
+                    <span id="middle-name-error" style="color:red" class="mandatory-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="last-name" class="starlabel">Last Name:</label><span style="color:red">*</span>
+                    <input type="text" id="last-name" name="last-name" placeholder="Enter last name">
+                    <span id="last-name-error" style="color:red" class="mandatory-error"></span>
+                </div>
+                
+                </div>
+                <div class="continue">  
+                    <input type="submit" value="Continue"> 
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="box mobile-info">
+            <div class="accordion">
+                <div class="mobile-info-header item-header active">
+                <h3>Mobile Information</h3>
+                </div>
+            </div>
+            <div class="content" style="display:none">
+                <div>
+                    <form id="mobile-info-form">
+                        <div class="number-types">
+                        <div class="form-group vip">
+                            <label for="type">VIP numbers</label>
+                            <input type="radio" id="vip" name="type" value="vip" class="radio-selector">
+                        </div>
+                        <div class="form-group regular">
+                            <label for="type">Regular numbers</label>
+                            <input type="radio" id="regular" name="type" value="regular" class="radio-selector">
+                        </div>
+                        </div>
+                        <div class="list" style="display:none">
+                           <select id="number" name="number">
+                           </select>
+                        </div>
+                        <div class="price" style="display:none" >
+                           <p>The price of the selected number is <span id="amount"></span></p>
+                        </div>
+                <div class="continue">
+                    <input type="submit" value="Continue" id="continue-mobile-button">
+                </div>
+            </div>
+    </div>
+  </div>
+
+    <div class="box summary">
+        <div class="accordion">
+            <div class="summary-info-header item-header active">
+                <h3>Summary</h3>
+            </div>
+        </div>
+            <div class="content" style="display:none">
+                <div id="statement" class="statement-details">
+                    <p>Pending</p>
+                </div>
+                <div class="statement-details">
+                </div>
+                <div class="signature-submission">
+                    <canvas class="canvas" id="signatureCanvas"  width="300" height="150"></canvas>
+                    <button id="clearButton">Clear</button>
+                  </div>
+                <div class="continue">
+                <button id="summary-submit-button">submit</button>
+                </div>
+            </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
